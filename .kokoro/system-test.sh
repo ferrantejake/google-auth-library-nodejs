@@ -31,6 +31,7 @@ if [ -f .kokoro/pre-system-test.sh ]; then
     set -x
 fi
 
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 npm install
 
 npm run system-test

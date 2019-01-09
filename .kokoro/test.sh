@@ -20,6 +20,7 @@ export NPM_CONFIG_PREFIX=/home/node/.npm-global
 
 cd $(dirname $0)/..
 
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 npm install
 npm test
 ./node_modules/nyc/bin/nyc.js report

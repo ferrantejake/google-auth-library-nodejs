@@ -27,5 +27,6 @@ cd $(dirname $0)/..
 NPM_TOKEN=$(cat $KOKORO_KEYSTORE_DIR/73713_google_cloud_npm_token)
 echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 npm install
 npm publish --access=public
